@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="acoes.js"></script>
+    <title>ex2</title>
+</head>
+<body>
+    <h1>Conta Bancária</h1>
+    <br>
+        <label for="numConta">Digite o número da conta:</label>
+        <input type="text" id="numConta">
+
+        <br><br>
+
+        <label for="titular">Digite o nome do titular:</label>
+        <input type="text" id="titular">
+  
+        <br><br>
+
+        <label for="saldo">Digite o número do saldo:</label>
+        <input type="number" id="saldo">
+
+        <br><br>
+
+        <label for="valor">Digite o valor:</label>
+        <input type="number" id="valor">
+
+        <br><br>
+
+        <button onclick="  
+
+        let numConBanc1= document.getElementById('numConta').value;
+    
+        let nomeTitular1 = document.getElementById('titular').value;
+    
+        let valSaldo1 = document.getElementById('saldo').value;
+    
+        let valor1 = document.getElementById('valor').value; 
+    
+        objBancario.setNumConta(numConBanc1);
+        objBancario.setTitular(nomeTitular1);
+        objBancario.setSaldo(valSaldo1);
+        objBancario.sacar(valor1); 
+    
+        let resul1 = objBancario.getSaldo();  
+        
+        alert('Saldo Atual: ' + resul1); ">Sacar</button> 
+    
+
+     <button onclick="  
+
+    let numConBanc= document.getElementById('numConta').value;
+
+    let nomeTitular = document.getElementById('titular').value;
+    
+    let valSaldo = document.getElementById('saldo').value;
+    
+    let valor = document.getElementById('valor').value; 
+
+    objBancario.setNumConta(numConBanc);
+    objBancario.setTitular(nomeTitular);
+    objBancario.setSaldo(valSaldo);
+    objBancario.depositar(valor); 
+    
+     let resul = objBancario.getSaldo();  
+
+    alert('Saldo Atual: ' + resul); ">Depositar</button>
+
+</body>
+</html>
+
+<script>
+objBancario = new ContaBancaria("Z", "Z", 0);
+</script>

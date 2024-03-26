@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="acoes.js"></script>
+    <title>ex4</title>
+</head>
+<body>
+    <h1>Estudante</h1>
+    <br><br>
+
+        <label for="nome">Nome do Estudante:</label>
+        <input type="text" id="nome">
+  
+        <br><br>
+
+        <label for="mat">Número da matrícula:</label>
+        <input type="text" id="mat">
+
+        <br><br>
+
+        <label for="n1">1- Nota:</label>
+        <input type="number" nome="n1" id="nota1">
+
+        <br><br>
+
+        <label for="n2">2- Nota:</label>
+        <input type="number" nome="n2" id="nota2">
+
+
+        <br><br>
+
+        <label for="n3">3- Nota:</label>
+        <input type="number" nome="n3" id="nota3">
+        <br><br>
+
+    <button onclick="  
+
+    let nome = document.getElementById('nome').value; 
+    objEstudante.setNome(nome); 
+
+    let matricula = document.getElementById('mat').value; 
+    objEstudante.setMatricula(matricula); 
+
+
+    let nota1 = document.getElementById('nota1').value; 
+    objEstudante.setNotas(nota1); 
+
+    let nota2 = document.getElementById('nota2').value; 
+    objEstudante.setNotas(nota2); 
+
+    let nota3 = document.getElementById('nota3').value; 
+    objEstudante.setNotas(nota3); 
+
+    let result = objEstudante.media(nota1, nota2, nota3); 
+
+    alert(' Valor da Média: ' . result );"> Média </button>
+
+
+</body>
+</html>
+<script>
+objEstudante= new Estudante("nome","matricula",0);
+</script>

@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="acoes.js"></script>
+    <title>ex1</title>
+</head>
+<body>
+  
+        <h1>Círculo:</h1>
+        Digite o valor do raio:
+        <input type="number" id="raio">
+
+        <br><br>
+
+     <button onclick="  
+   let raio = document.getElementById('raio').value; 
+
+    objCirculo.setRaio(raio); 
+    
+    let resul = objCirculo.calcArea(); 
+
+    alert('resultado' + resul);">Calcular Área</button>
+   
+   <br> <br>
+
+<button onclick="  
+
+    let raio1 = document.getElementById('raio').value; 
+
+    objCirculo.setRaio(raio1); 
+
+    let resul1 = objCirculo.calcPerimetro();
+
+    alert('resultado'+ resul1); ">Calcular Perímetro</button> 
+
+</body>
+</html>
+<script>
+    
+objCirculo = new Circulo(0);
+
+</script>

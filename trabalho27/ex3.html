@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="acoes.js"></script>
+    <title>ex3</title>
+</head>
+<body>
+    <h1>Retângulo:</h1>
+    <br><br>
+
+    <label for="base"> Valor da base:</label>
+    <input type="text" id="base">
+
+    <br><br>
+
+    <label for="altura"> Valor da altura:</label>
+    <input type="text" id="altura">
+
+    <br><br>
+
+<button onclick="  
+
+let base1 = document.getElementById('base').value; 
+
+objRetangulo.setLargura(base1); 
+
+let altura1 = document.getElementById('altura').value; 
+
+objRetangulo.setAltura(altura1); 
+
+let resul1 = objRetangulo.calcPerimetro(); 
+
+alert('Valor da Perímetro: ' + resul1);">Calcular Perimetro</button>
+
+
+<button onclick="  
+
+let base = document.getElementById('base').value; 
+
+objRetangulo.setLargura(base); 
+
+let altura = document.getElementById('altura').value; 
+
+objRetangulo.setAltura(altura); 
+
+let resul = objRetangulo.calcArea(); 
+
+alert('Valor da Área: ' + resul);">Calcular Área</button> 
+    
+</body>
+</html>
+
+<script>
+objRetangulo = new Retangulo(0,0);
+</script>    

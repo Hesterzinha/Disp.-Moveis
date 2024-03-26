@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="acoes.js"></script>
+    <title>ex6</title>
+</head>
+<body>
+
+    <h1>Carro</h1>
+
+    <label for="marca">Digite a marca do carro:</label>
+    <input type="text" id="marca">
+
+    <br><br>
+
+    <label for="modelo">Digite o modelo do carro:</label>
+    <input type="text" id="modelo">
+
+    <br><br>
+
+    <label for="velocidade">Digite a velocidade:</label>
+    <input type="text" id="velocidade">
+
+    <br><br>
+
+    <label for="alteracao"> Valor da alteração da velocidade:</label>
+    <input type="text" id="alteracao">
+
+<br><br>
+
+<button onclick=" 
+    
+   let marca1 = document.getElementById('marca').value; 
+   objCarro.setMarca(marca1); 
+
+   let modelo1 = document.getElementById('modelo').value; 
+   objCarro. setModelo(modelo1); 
+
+   let velocidade1 = document.getElementById('velocidade').value; 
+   objCarro.setVelocidade(velocidade1); 
+
+   let alteracao1 = document.getElementById('alteracao').value; 
+   objCarro.Frear(alteracao1); 
+   
+
+   let resul1 = objCarro.getVelocidade(); 
+   alert('resultado: ' + resul1);">Velocidade com freamento</button>
+
+   
+
+<button onclick=" 
+    
+let marca = document.getElementById('marca').value; 
+objCarro.setMarca(marca); 
+
+let modelo = document.getElementById('modelo').value; 
+objCarro.setModelo(modelo); 
+
+let velocidade = document.getElementById('velocidade').value; 
+objCarro.setVelocidade(velocidade); 
+
+let alteracao= document.getElementById('alteracao').value; 
+objCarro.Acelerar(alteracao); 
+
+
+let resul = objCarro.getVelocidade(); 
+alert('resultado: ' + resul);">Velocidade com aceleração</button>
+
+
+</body>
+</html>
+<script>objCarro= new Carro("marca","modelo",0);</script>

@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="acoes.js"></script>
+    <title></title>
+</head>
+<body>
+        <h1>Livro</h1>
+
+        <label for="titulo">Digite o nome do título</label>: 
+        <input type="text" id="titulo"> 
+
+         <br><br>
+         
+         <label for="autor">Digite o nome do autor:</label> 
+        <input type="text" id="autor"> 
+
+        <br><br>
+
+        <label for="pagina">Digite a quantidade de páginas:</label> 
+        <input type="text" id="pagina"> 
+
+         <br><br>
+
+         <button onclick="
+
+         let titulo = document.getElementById('titulo').value;
+         objLivro.setTitulo(titulo);
+
+         let autor = document.getElementById('autor').value;
+         objLivro.setAutor(autor);
+
+         let pagina = document.getElementById('pagina').value;
+         objLivro.setPaginas(pagina);
+         
+
+         resultado = objLivro.emprestar();
+         alert(resultado);">Emprestimo</button>
+
+
+         <button onclick="
+
+         let titulo2 = document.getElementById('titulo').value;
+         objLivro.setTitulo(titulo2);
+ 
+         let autor2 = document.getElementById('autor').value;
+         objLivro.setAutor(autor2);
+ 
+         let pagina2 = document.getElementById('pagina').value;
+         objLivro.setPaginas(pagina2);
+ 
+ 
+         resultado1 = objLivro.devolver();
+         alert(resultado1);">Devolver</button>
+
+        <button onclick="
+
+        let titulo3 = document.getElementById('titulo').value;
+        objLivro.setTitulo(titulo3);
+
+        let autor3 = document.getElementById('autor').value;
+        objLivro.setAutor(autor3);
+
+        let pagina3 = document.getElementById('pagina').value;
+        objLivro.setPaginas(pagina3);
+
+
+       let resul2 = objLivro.verificar();
+        alert(resul2);">Verificar</button>
+
+
+    
+</body>
+</html>
+<script> objLivro = new Livro("titulo", "autor", 0);</script>

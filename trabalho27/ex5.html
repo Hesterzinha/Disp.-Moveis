@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="acoes.js"></script>
+    <title>ex5</title>
+</head>
+<body>
+  
+    <h1>Produto</h1>
+
+    <br><br>
+
+    <label for="nome">Digite o nome do Produto:</label>
+    <input type="text" id="nome">
+
+    <br><br>
+
+    <label for="preco">Digite o preço do Produto:</label>
+    <input type="text" id="preco">
+
+    <br><br>
+
+    <label for="prod">Digite a quantidade do Produto:</label>
+    <input type="text" id="prod">
+
+    <br><br>
+
+    <button onclick="
+    
+    let nome = document.getElementById('nome').value; 
+    objProduto. setNome(nome); 
+
+    let preco = document.getElementById('preco').value; 
+    objProduto. setPreco(preco); 
+
+    let produto = document.getElementById('prod').value; 
+    objProduto. setQntEstoque(produto); 
+    
+
+    let resul = objProduto.valorEstoque(); 
+    alert('resultado: ' + resul );">Valor do Estoque</button>
+    
+    
+    <button onclick="
+    
+    let nome1 = document.getElementById('nome').value; 
+    objProduto. setNome(nome1); 
+
+    let preco1 = document.getElementById('preco').value; 
+    objProduto. setPreco(preco1); 
+
+    let produto1 = document.getElementById('prod').value; 
+    objProduto. setQntEstoque(produto1); 
+    
+
+    let resul1 = objProduto.disponivel(); 
+    alert('resultado: ' + resul1);">Produto Disponível</button>
+    
+</body>
+</html>
+<script>objProduto= new Produto("nome",0,0);</script>
