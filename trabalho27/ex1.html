@@ -4,42 +4,56 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <script src="acoes.js"></script>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
     <title>ex1</title>
 </head>
 <body>
+
+  <nav class="navbar bg-body-tertiary">
+    <div class="container-fluid">
+      <span class="navbar-brand mb-2 h1">Calcular área do círculo</span>
+    </div>
+  </nav>
+
+  <br><br>
+
+    <div class="row g-3">
+        <div class="col">
+          <input type="number" id="raio" class="form-control" placeholder="Raio do círculo" aria-label="Raio do círculo" required>
+        </div>
+        <div class="col">
+          <input type="text" class="form-control" placeholder=" Número de PI usado: 3,14" aria-label="Número de PI usado: 3,14" disabled>
+        </div>
+      </div>
   
-        <h1>Círculo:</h1>
-        Digite o valor do raio:
-        <input type="number" id="raio">
+<br><br>
 
-        <br><br>
 
-     <button onclick="  
-   let raio = document.getElementById('raio').value; 
 
-    objCirculo.setRaio(raio); 
+    <button onclick="let raio = document.getElementById('raio').value; 
+
+        objCirculo.setRaio(raio); 
+        
+        let resul = objCirculo.calcArea(); 
     
-    let resul = objCirculo.calcArea(); 
+        alert('resultado: ' + resul);" type="button" class="btn btn-outline-dark" >Calcular Área
+    </button>
 
-    alert('resultado' + resul);">Calcular Área</button>
-   
-   <br> <br>
+    <button onclick="  
 
-<button onclick="  
+        let raio1 = document.getElementById('raio').value; 
 
-    let raio1 = document.getElementById('raio').value; 
+        objCirculo.setRaio(raio1); 
 
-    objCirculo.setRaio(raio1); 
+        let resul1 = objCirculo.calcPerimetro();
 
-    let resul1 = objCirculo.calcPerimetro();
+        alert('resultado: '+ resul1);" type="button" class="btn btn-outline-dark ">Calcular Perímetro
+    </button>
 
-    alert('resultado'+ resul1); ">Calcular Perímetro</button> 
-
+</div>
 </body>
 </html>
-<script>
-    
+<script>    
 objCirculo = new Circulo(0);
-
 </script>
-<!--bierb-->
